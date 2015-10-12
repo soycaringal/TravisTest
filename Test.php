@@ -10,7 +10,7 @@ class TestTest extends PHPUnit_Framework_TestCase
 	
 	public function testRender()
 	{
-		$this->assertContains('aw', 'aw');
+		$this->assertContains('aww', 'aw');
 	}
 	
 }
