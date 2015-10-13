@@ -26,7 +26,7 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
         $this->byName("uname")->value("root");
         $this->byName("password")->value("root");
         $this->byCssSelector("input[type=\"submit\"]")->click();
-        $this->byName("una2me")->value("root");
+        $this->byName("uname")->value("root");
         $this->byName("password")->value("root");
     }
 }
