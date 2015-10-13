@@ -8,12 +8,12 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
      * Setup
      * @return void 
      */
-    public function setUp()
+     public function setUp()
     {
         $this->setBrowser('phantomjs');
         $this->setHost('127.0.0.1');
         $this->setPort(4444);
-        $this->setBrowserUrl('https://www.google.com.ph/');
+        $this->setBrowserUrl('http://127.0.0.1/');
     }
     
     /** 
@@ -22,9 +22,13 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
      */ 
     public function testSelenium()
     {
-        $this->url("/?gfe_rd=cr&ei=UIkcVsvsOsuM8QfA4ZzYDw&gws_rd=ssl");
-        $this->byName("btnI")->click();
-        $this->byId("searchinput")->value("aw");
+        $this->url("/TravisTest/tests/");
+        $this->byLinkText("simpleTest.html")->click();
+        $this->byName("uname")->value("root");
+        $this->byName("password")->value("root");
+        $this->byCssSelector("input[type=\"submit\"]")->click();
+        $this->byName("uname")->value("root");
+        $this->byName("password")->value("root");
     }
 }
 ?>
