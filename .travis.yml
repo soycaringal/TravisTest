@@ -3,10 +3,8 @@ php:
   - 5.4
 sudo: required
 before_script:
-  - /home/travis/.phpenv/versions/5.5/bin/composer install
-  - phpenv rehash
   - ./tests/setup/before_script.sh
   - ./tests/setup/apache.sh
   - ./tests/setup/selenium.sh
 
-script: phpunit tests/
+script: phpunit

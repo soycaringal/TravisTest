@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
- 
 class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
 {
     /**
