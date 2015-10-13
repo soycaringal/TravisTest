@@ -1,8 +1,7 @@
 <?php
 
-require_once 'PHPUnit/Extensions/SeleniumTestCase.php';
  
-class simpleTestTest extends PHPUnit_Extensions_SeleniumTestCase
+class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
 {
     protected function setUp()
     {
