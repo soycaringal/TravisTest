@@ -1,21 +1,22 @@
 <?php
 
+require_once __DIR__.'/../vendor/autoload.php';
  
-class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
+class simpleTestTest extends PHPUnit_Extensions_SeleniumTestCase
 {
     protected function setUp()
     {
         $this->setBrowser('*firefox');
-        $this->setBrowserUrl('http://127.0.0.1/');
+        $this->setBrowserUrl('http://google.com/');
     }
  
     public function testLoadPage()
     {
-        $this->open('http://127.0.0.1/tests/simpleTest.html');
+        $this->open('/doodles');
 
-        $this->waitForPageToLoad ( "30000" );
+        $this->waitForPageToLoad ( "3000" );
 
-        $this->assertTitle('phpunit selenium test');
+        $this->assertTitle('Google Doodles');
     }
 
 }
