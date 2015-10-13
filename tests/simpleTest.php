@@ -22,7 +22,7 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
      */ 
     public function testSelenium()
     {
-        $this->url("/TravisTest/tests/");
+        $this->url("/tests/");
         $this->byLinkText("simpleTest.html")->click();
         $this->byName("uname")->value("root");
         $this->byName("password")->value("root");
