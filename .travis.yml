@@ -7,7 +7,7 @@ before_script:
   - ./tests/setup/apache.sh
   - ./tests/setup/selenium.sh
 
-script: phpunit --verbose -c tests/phpunit.xml
+script: phpunit tests/simpleTest.php
 notifications:
   email:
     - soycaringal@gmail.com
